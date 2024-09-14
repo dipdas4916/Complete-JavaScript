@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in JS</title>
+    <style>
+        body{
+            background-color: #414141;
+            color:#ffff;
+            
+        }
+        #images li{
+            margin-bottom: 20px;
+            cursor:pointer;
+        }
+        #google{
+            color:rgb(2, 191, 254);
+            text-shadow: 3px 3px 3px blue;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images" type="none">
+            <li id="nature">
+                <img src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478040.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1726250400&semt=ais_hybrid" alt="nature image" width="20%">
+            </li>
+            <li id="coding-image">
+                <img src="https://i.insider.com/60144316a7c0c4001991dde6?width=800&format=jpeg&auto=webp" alt="Coding Image" width="20%">
+            </li>
+            <li id="pigeon">
+                <img src="https://images.pexels.com/photos/1406506/pexels-photo-1406506.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Pigeon Image" width="20%">
+            </li>
+            <li id="rabbit">
+                <!-- <img src="https://i.pinimg.com/736x/b8/25/e1/b825e1484a21bb183466a3890df21c39.jpg" alt="Rabbit Image" width="20%" onclick="alert('RABBIT')">  It is not a good approach. It is not feasable approach. -->  
+                <img src="https://i.pinimg.com/736x/b8/25/e1/b825e1484a21bb183466a3890df21c39.jpg" alt="Rabbit Image" width="20%">
+            </li>
+            <li>
+                <a href="https://www.google.com/" id="google" target="_blank">Google</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // document.getElementById('rabbit').onclick = function(){
+        //     alert("Rabbit Clicked");
+        // }   It is also a Prablatic approach, because here we have less no of feature. So addEventListner() is the best approach...
+
+        document.getElementById('rabbit').addEventListener('click', function(){
+            alert("Rabbit Clicked Again..");
+        }, false);  // It is the ideal approach. Because here many events are present like click, double click, up arrow, down arrow etc.
+        // Here third parameter also present which default value is FALSE
+
+        // attachEvent(): is also a approach, which used earlier when internet xplorer is used.
+
+        // jQuery : onEvent() 
+    </script>
+</body>
+</html>
